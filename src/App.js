@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import Header from './layouts/Header'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="site-wrap">
+
+      {/** menu desplegable para mobil */}
+        <div className="site-mobile-menu">
+          <div className="site-mobile-menu-header">
+            <div className="site-mobile-menu-close mt-3">
+              <span className="icon-close2 js-menu-toggle"></span>
+            </div>
+          </div>
+          <div className="site-mobile-menu-body"></div>
+        </div>
+
+       {/** cabecera */}
+       <Header/>
+
+      </div>
     </div>
   );
 }
