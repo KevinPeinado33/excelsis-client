@@ -1,27 +1,20 @@
 import React from 'react';
 
-import Header from './layouts/Header'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Login from './components/login/Login';
+import Home from './Home';
+import Pruebis from './components/panel/Pruebis';
 
 function App() {
   return (
-    <div className="App">
-      <div className="site-wrap">
-
-      {/** menu desplegable para mobil */}
-        <div className="site-mobile-menu">
-          <div className="site-mobile-menu-header">
-            <div className="site-mobile-menu-close mt-3">
-              <span className="icon-close2 js-menu-toggle"></span>
-            </div>
-          </div>
-          <div className="site-mobile-menu-body"></div>
-        </div>
-
-       {/** cabecera */}
-       <Header/>
-
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/login' component={Login} />
+        <Route exact path='/panel' component={Pruebis} />
+      </Switch>
+    </Router>
   );
 }
 
