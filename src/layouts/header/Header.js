@@ -38,11 +38,11 @@ export default function Header() {
                                 */}
 
                                 <li>
-                                    <button type="button" className="btn btn-light btn-block">
-                                        <Link to="/login">
+                                    <Link to="/login">
+                                        <button type="button" className="btn btn-light btn-block">
                                             Panel
-                                        </Link>
                                     </button>
+                                    </Link>
                                 </li>
 
                             </ul>

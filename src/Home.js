@@ -2,6 +2,8 @@ import React from 'react';
 
 import Header from './layouts/header/Header';
 import Banner from './layouts/banner/Banner';
+import Noticias from './components/noticias/Noticias';
+import Footer from './layouts/footer/Footer';
 
 export default function Home() {
     return (
@@ -23,6 +25,14 @@ export default function Home() {
 
                 {/** banner principal, imagen, y formulario */}
                 <Banner />
+
+                {/** cuerpo [cards, y wittdget] */}
+                <div className="site-section bg-light">
+                    <div className="container">
+                        <Noticias />
+                    </div>
+                </div>
+                <Footer />
 
             </div>
         </div>
