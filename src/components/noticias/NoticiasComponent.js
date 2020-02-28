@@ -5,7 +5,6 @@ import SidebarDashboard from '../panel/dashboard/sidebar/SidebarDashboard';
 import FooterDashboard from '../panel/dashboard/footer/Footer';
 
 import NoticasForm from './NoticiasForm';
-import NoticasList from './NoticiasList';
 
 export default function NoticiasComponent() {
     return (
@@ -17,7 +16,6 @@ export default function NoticiasComponent() {
                     <div className="content-wrapper">
                         {/** aqui va todo el contenido de la pagina */}
                         <NoticasForm />
-                        <NoticasList />
                     </div>
                     <FooterDashboard />
                 </div>

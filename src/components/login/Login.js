@@ -1,4 +1,6 @@
 import React, { Fragment, useState } from 'react';
+
+import { API_BASE_URL } from '../../config/Configuracion';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
@@ -12,7 +14,8 @@ export default function Login(props) {
 
     function handleSubmit(event) {
         event.preventDefault();
-        axios.post('http://localhost:4000/validar-usuario', { usuario, password })
+        const url = `${API_BASE_URL}/validar-usuario`;
+        axios.post(url, { usuario, password })
             .then(response => {
                 const data = response.data;
                 if (JSON.stringify(data).length >= 3) {

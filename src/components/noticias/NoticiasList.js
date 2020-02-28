@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+
+import { API_BASE_URL } from '../../config/Configuracion';
 import axios from 'axios';
 
 export default function NoticasList() {
@@ -6,16 +8,13 @@ export default function NoticasList() {
     const [noticias, setNoticias] = useState([]);
 
     useEffect(() => {
-        obtenerNoticias()
-    }, [noticias]);
-
-    function obtenerNoticias() {
-        axios.get('http://localhost:4000/listado-noticia')
+        const url = `${API_BASE_URL}/listado-noticia`;
+        axios.get(url)
             .then(response => {
                 const data = response.data;
-                setNoticias({ data });
+                setNoticias(data);
             });
-    }
+    }, []);
 
     return (
         <div className="row" style={{ marginTop: 50 }}>
@@ -32,25 +31,14 @@ export default function NoticasList() {
                         </tr>
                     </thead>
                     <tbody>
-                        {noticias.map((item) => () => {
-                            <tr>
-                                <td>
-                                    item + 1
-                                </td>
-                                <td>
-                                    item.titulo
-                                </td>
-                                <td>
-                                    item.categoria
-                                </td>
-                                <td>
-                                    item.lugar
-                                </td>
-                                <td>
-                                    item.url_imagen
-                                </td>
+                        {noticias.map((item, index) =>
+                            <tr key={item.idnoticia}>
+                                <td>{index + 1}</td>
+                                <td>{item.titulo}</td>
+                                <td>{item.categoria}</td>
+                                <td>{item.lugar}</td>
                             </tr>
-                        })}
+                        )}
                     </tbody>
                 </table>
             </div>
