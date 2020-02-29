@@ -4,6 +4,8 @@ import NavbarDashboard from '../panel/dashboard/navbar/NavbarDashboard';
 import SidebarDashboard from '../panel/dashboard/sidebar/SidebarDashboard';
 import FooterDashboard from '../panel/dashboard/footer/Footer';
 
+import BandejaList from './BandejaList';
+
 export default function Bandeja() {
     return (
         <div className="container-scroller"> {/** engloba todo el cuerpo del dashord */}
@@ -13,7 +15,7 @@ export default function Bandeja() {
                 <div className="main-panel">
                     <div className="content-wrapper">
                         {/** aqui va todo el contenido de la pagina */}
-                        <h1>Bandeja..!!</h1>
+                        <BandejaList />
                     </div>
                     <FooterDashboard />
                 </div>
