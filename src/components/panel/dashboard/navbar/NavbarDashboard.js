@@ -1,13 +1,15 @@
 import React from 'react';
 import logo_excelsis from '../../../../resources/img/logo_excelsis.png';
 
+import { Link } from 'react-router-dom';
+
 export default function NavbarDashboard() {
     return (
         <nav className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a className="navbar-brand brand-logo mr-5" href="!#"><img src={logo_excelsis} className="mr-2"
-                    alt="logo" /></a>
-                <a className="navbar-brand brand-logo-mini" href="!#"><img src={logo_excelsis} alt="logo" /></a>
+                <Link to="/" className="navbar-brand brand-logo mr-5" href="!#"><img src={logo_excelsis} className="mr-2"
+                    alt="logo" /></Link>
+                <Link to="/" className="navbar-brand brand-logo-mini" href="!#"><img src={logo_excelsis} alt="logo" /></Link>
             </div>
             <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
                 <button className="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">

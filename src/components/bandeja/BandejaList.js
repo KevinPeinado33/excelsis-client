@@ -19,7 +19,6 @@ export default function BandejaList() {
                 .then(response => {
                     const data = response.data;
                     setInteresados(data);
-                    console.log(interesados);
                     setConsulta(false);
                 });
         }

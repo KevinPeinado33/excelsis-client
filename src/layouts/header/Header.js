@@ -1,11 +1,10 @@
 import React from 'react';
 import './style-header.css';
 
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     return (
-        <Router>
             <header className="site-navbar container py-0 bg-white" role="banner">
                 <div className="row align-items-center">
 
@@ -58,6 +57,5 @@ export default function Header() {
                 </div>
 
             </header >
-        </Router >
     );
 }
