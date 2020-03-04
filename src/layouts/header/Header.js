@@ -2,6 +2,7 @@ import React from 'react';
 import './style-header.css';
 
 import { Link } from 'react-router-dom';
+import LogoExcelsis from '../../resources/img/logo_excelsis.png';
 
 export default function Header() {
     return (
@@ -9,8 +10,7 @@ export default function Header() {
                 <div className="row align-items-center">
 
                     <div className="col-6 col-xl-2">
-                        <h1 className="mb-0 site-logo"><a href="index.html" className="text-black mb-0">Exce<span
-                            className="text-primary">lsis</span> </a></h1>
+                        <img src={LogoExcelsis} style={{width: 150}} />
                     </div>
                     <div className="col-12 col-md-10 d-none d-xl-block">
                         <nav className="site-navigation position-relative text-right" role="navigation">
@@ -39,7 +39,7 @@ export default function Header() {
                                 <li>
                                     <Link to="/login">
                                         <button type="button" className="btn btn-light btn-block">
-                                            Panel
+                                            Panel <i className="ti-shift-right menu-icon"></i>
                                     </button>
                                     </Link>
                                 </li>

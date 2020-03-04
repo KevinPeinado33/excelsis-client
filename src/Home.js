@@ -4,6 +4,7 @@ import Header from './layouts/header/Header';
 import Banner from './layouts/banner/Banner';
 import Noticias from './components/noticias/Noticias';
 import Footer from './layouts/footer/Footer';
+import Popular from './layouts/popular/Popular';
 
 export default function Home() {
     return (
@@ -30,6 +31,12 @@ export default function Home() {
                 <div className="site-section bg-light">
                     <div className="container">
                         <Noticias />
+                        <div className="site-section" data-aos="fade">
+                            <div className="container">
+                                {/** fotos recuerdos */}
+                                <Popular />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <Footer />

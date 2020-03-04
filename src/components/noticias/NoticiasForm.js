@@ -1,7 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 
 import { API_BASE_URL } from '../../config/Configuracion';
-import NoticasList from './NoticiasList';
 import axios from 'axios';
 
 export default function NoticiasForm() {
