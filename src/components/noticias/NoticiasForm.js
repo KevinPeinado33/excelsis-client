@@ -14,7 +14,7 @@ export default function NoticiasForm() {
 
     function registrarNotcia(event) {
         event.preventDefault();
-        const url = `${API_BASE_URL}/registrar-noticias`;
+        const url = `${API_BASE_URL}/noticia/registrar-noticias`;
         axios.post(url, {titulo, categoria, lugar})
             .then(response => {
                 if(response.status === 200 ) {

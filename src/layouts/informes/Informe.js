@@ -13,7 +13,7 @@ export default function Informe() {
 
     function registrarInteresado(event) {
         event.preventDefault();
-        const url = `${API_BASE_URL}/registrar-nuevo-interesado`;
+        const url = `${API_BASE_URL}/interesado/registrar-nuevo-interesado`;
         axios.post(url, { nombres, numCelular, nivel })
             .then(response => {
                 if (response.status === 200) {
@@ -66,7 +66,7 @@ export default function Informe() {
                                 <option value="" disabled>Nivel</option>
                                 <option value="Inicial">Incial</option>
                                 <option value="Primaria">Primaria</option>
-                                <option value="SecundariaS">Secundaria</option>
+                                <option value="Secundaria">Secundaria</option>
                             </select>
                         </div>
                     </div>

@@ -14,7 +14,7 @@ export default function Login(props) {
 
     function handleSubmit(event) {
         event.preventDefault();
-        const url = `${API_BASE_URL}/validar-usuario`;
+        const url = `${API_BASE_URL}/usuario/validar-usuario`;
         axios.post(url, { usuario, password })
             .then(response => {
                 const data = response.data;

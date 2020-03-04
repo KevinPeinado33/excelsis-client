@@ -8,7 +8,7 @@ export default function NoticasList() {
     const [noticias, setNoticias] = useState([]);
 
     useEffect(() => {
-        const url = `${API_BASE_URL}/listado-noticia`;
+        const url = `${API_BASE_URL}/noticia/listado-noticia`;
         axios.get(url)
             .then(response => {
                 const data = response.data;
