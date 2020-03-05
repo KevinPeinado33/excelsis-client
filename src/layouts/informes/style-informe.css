@@ -1,0 +1,9 @@
+.btn-personalizado {
+    background-color: #CC241C;
+    color: #fff;
+}
+
+.btn-personalizado:hover{
+    background-color: rgb(200, 69, 62);
+    color: #fff;
+}

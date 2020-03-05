@@ -12,8 +12,6 @@ export default function Footer() {
                                 <p>
                                     Somos una instución educativa, que desea ayudar a la comunidad formando estudiantes
                                     con valores y capacidades para forjar un mejor futuro.
-
-
                                 </p>
                             </div>
 

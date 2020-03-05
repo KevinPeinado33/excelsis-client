@@ -11,6 +11,20 @@ import Publicaciones from './components/publicacion/Publicacion';
 import NoticiasComponent from './components/noticias/NoticiasComponent';
 import Configuracion from './components/configuracion/Configuracion';
 
+import firebase from 'firebase';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBcB1EljfslStE-BXc_SNhC5o2AGTfcvG4",
+  authDomain: "dbexcelsis.firebaseapp.com",
+  databaseURL: "https://dbexcelsis.firebaseio.com",
+  projectId: "dbexcelsis",
+  storageBucket: "dbexcelsis.appspot.com",
+  messagingSenderId: "636725916438",
+  appId: "1:636725916438:web:663c24035d84314f50d637"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 function App() {
   return (
     <Router>
@@ -22,6 +36,7 @@ function App() {
         <Route exact path='/publicaciones' component={Publicaciones} />
         <Route exact path='/noticias' component={NoticiasComponent} />
         <Route exact path='/configuracion' component={Configuracion} />
+        
         <Route exact component={NotFound} />
       </Switch>
     </Router>

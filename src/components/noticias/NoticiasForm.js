@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 
 import { API_BASE_URL } from '../../config/Configuracion';
 import axios from 'axios';
+import firebase from 'firebase';
 
 export default function NoticiasForm() {
 
@@ -13,24 +14,44 @@ export default function NoticiasForm() {
     const [estado, setEstado] = useState(false);
     const [consulta, setConsulta] = useState(true);
 
+    const [uploadValue, setUploadValue] = useState(0);
+    const [picture, setPicture] = useState('');
+
     useEffect(() => {
         obtenerNoticas();
-    }, [consulta]);
+    }, [consulta, noticias]);
 
     function registrarNotcia(event) {
         event.preventDefault();
         const url = `${API_BASE_URL}/noticia/registrar-noticias`;
-
-        axios.post(url, { titulo, categoria, lugar })
+        axios.post(url, { titulo, categoria, lugar, picture })
             .then(response => {
                 if (response.status === 200) {
                     setTitulo('');
                     setCategoria('');
                     setLugar('');
+                    setPicture('');
                     setConsulta(true);
                 } else { setEstado(true); }
             });
 
+    }
+
+    function handleUpload(event) {
+        const file = event.target.files[0];
+        const storageRef = firebase.storage().ref(`/fotos/${file.name}`);
+        const task = storageRef.put(file);
+
+        task.on('state_changed', snapshot => {
+            let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            setUploadValue(percentage);
+        }, error => {
+            console.log(error.message);
+        }, () => {
+            storageRef.getDownloadURL().then(url => {
+                setPicture(url);
+            })
+        });
     }
 
     function validarFormulario() { return titulo.length > 0 && categoria.length > 0 && lugar.length > 0; }
@@ -45,6 +66,20 @@ export default function NoticiasForm() {
                     setConsulta(false);
                 });
         }
+    }
+
+    function eliminarNoticia(index, idnoticia) {
+        noticias.splice(index, 1);
+        const url = `${API_BASE_URL}/noticia/cambiar-estado-noticia/${idnoticia}`;
+        axios.put(url)
+            .then(response => {
+                if(response.status === 200) {
+                    console.log('Actualizado Correctament');
+                } else {
+                    console.log('Error');
+                }
+            });
+            setConsulta(true);
     }
 
     return (
@@ -85,7 +120,14 @@ export default function NoticiasForm() {
                             <div className="col-md-6">
                                 <div className="form-group">
                                     <label>Imagen banner</label>
-                                    <input type="file" className="form-control-file" />
+                                    <br/>
+                                    <progress value={uploadValue} max="100"></progress>
+                                    <br/>
+                                    <input 
+                                        type="file" 
+                                        className="form-control-file" 
+                                        onChange={e => handleUpload(e)}
+                                    />
                                 </div>
                             </div>
                             <div className="col-md-5">
@@ -113,7 +155,7 @@ export default function NoticiasForm() {
             <div className="row" style={{ marginTop: 50 }}>
                 <div className="col-md-11">
                     <h4>Todas Las Noticias</h4>
-                    <table className="table table-hover" style={{ marginTop: 20 }}>
+                    <table className="table table-hover" style={{ marginTop: 20, textAlign: "center" }}>
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -121,6 +163,7 @@ export default function NoticiasForm() {
                                 <th scope="col">Categoria</th>
                                 <th scope="col">Lugar</th>
                                 <th scope="col">Url Imagen</th>
+                                <th scope="col">Opcion</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -130,6 +173,16 @@ export default function NoticiasForm() {
                                     <td>{item.titulo}</td>
                                     <td>{item.categoria}</td>
                                     <td>{item.lugar}</td>
+                                    <td>{item.url_imagen.length > 35 ? `${item.url_imagen.substring(0,35)}...`: ''}</td>
+                                    <td>
+                                        <button
+                                            type="button"
+                                            className="btn btn-outline-danger"
+                                            onClick={() => eliminarNoticia(index, item.idnoticia)}
+                                        >
+                                            <i className="ti-trash menu-icon"></i> Eliminar
+                                        </button>
+                                    </td>
                                 </tr>
                             )}
                         </tbody>

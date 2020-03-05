@@ -2,6 +2,7 @@ import React, { useState, Fragment } from 'react';
 
 import axios from 'axios';
 import { API_BASE_URL } from '../../config/Configuracion';
+import './style-informe.css';
 
 export default function Informe() {
 
@@ -71,7 +72,12 @@ export default function Informe() {
                         </div>
                     </div>
                     <div className="col-lg-12 col-xl-2 ml-auto text-right">
-                        <input type="submit" className="btn btn-primary btn-block rounded" value="Enviar" disabled={!validarFormulario()} />
+                        <input 
+                            type="submit" 
+                            className="btn btn-block rounded btn-personalizado" 
+                            value="Enviar" 
+                            disabled={!validarFormulario()} 
+                        />
                     </div>
                 </div>
             </form>

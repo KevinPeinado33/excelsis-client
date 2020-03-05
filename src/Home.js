@@ -4,7 +4,10 @@ import Header from './layouts/header/Header';
 import Banner from './layouts/banner/Banner';
 import Noticias from './components/noticias/Noticias';
 import Footer from './layouts/footer/Footer';
+
 import Popular from './layouts/popular/Popular';
+import Ubicacion from './layouts/ubicacion/Ubicacion';
+import Ideales from './layouts/ideales/Ideales';
 
 export default function Home() {
     return (
@@ -31,13 +34,22 @@ export default function Home() {
                 <div className="site-section bg-light">
                     <div className="container">
                         <Noticias />
-                        <div className="site-section" data-aos="fade">
-                            <div className="container">
-                                {/** fotos recuerdos */}
-                                <Popular />
-                            </div>
+                    </div>
+
+                    <div className="site-section" data-aos="fade">
+                        <div className="container">
+                            {/** fotos recuerdos */}
+                            <Popular />
                         </div>
                     </div>
+                    <div className="site-section" data-aos="fade">
+                        {/** ubicacion del colegio API google maps */}
+                        <div className="container">
+                            <Ubicacion />
+                        </div>
+                    </div>
+                    <Ideales />
+
                 </div>
                 <Footer />
 
