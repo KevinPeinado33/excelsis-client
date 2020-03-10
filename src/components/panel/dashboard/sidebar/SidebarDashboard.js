@@ -17,22 +17,24 @@ export default function SidebarDashboard() {
                         <span className="menu-title">Noticas</span>
                     </NavLink>
                 </li>
+                {/**
                 <li className="nav-item">
-                    <a className="nav-link" href="!#">
+                    <NavLink to="/cambiar-fondo-princial"  className="nav-link">
                         <i className="ti-layout-list-post menu-icon"></i>
-                        <span className="menu-title">Historial</span>
-                    </a>
+                        <span className="menu-title">Fondo Principal</span>
+                    </NavLink>
                 </li>
+                 */}
                 <li className="nav-item">
-                    <a className="nav-link" href="!#">
+                    <NavLink to="/lista-usuarios" className="nav-link">
                         <i className="ti-pie-chart menu-icon"></i>
-                        <span className="menu-title">Multimedia</span>
-                    </a>
+                        <span className="menu-title">Lista De Usuario</span>
+                    </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/configuracion" className="nav-link">
+                    <NavLink to="/crear-usuario-nuevo" className="nav-link">
                         <i className="ti-view-list-alt menu-icon"></i>
-                        <span className="menu-title">Configuración</span>
+                        <span className="menu-title">Crear Usuario</span>
                     </NavLink>
                 </li>
                 {/**

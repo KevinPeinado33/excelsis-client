@@ -21,7 +21,7 @@ export default function Popular() {
 
                     <div className="listing-item">
                         <div className="listing-image">
-                            <img src={Foto_1} alt="Image" className="img-fluid" />
+                            <img src={Foto_1} alt="fotoA" className="img-fluid" />
                         </div>
                         <div className="listing-item-content">
                             <a className="px-3 mb-3 category" href="!#">Nombramiento</a>
@@ -35,11 +35,11 @@ export default function Popular() {
 
                     <div className="listing-item">
                         <div className="listing-image">
-                            <img src={Foto_2}  alt="Image" className="img-fluid" />
+                            <img src={Foto_2}  alt="fotoD" className="img-fluid" />
                         </div>
                         <div className="listing-item-content">
-                            <a className="px-3 mb-3 category" href="#">Desfile</a>
-                            <h2 className="mb-1"><a href="#">Desfile Escolar Nivel Secundario</a></h2>
+                            <a className="px-3 mb-3 category" href="!#">Desfile</a>
+                            <h2 className="mb-1"><a href="!#">Desfile Escolar Nivel Secundario</a></h2>
                             <span className="address">Lambayeque, Plaza</span>
                         </div>
                     </div>
@@ -49,11 +49,11 @@ export default function Popular() {
 
                     <div className="listing-item">
                         <div className="listing-image">
-                            <img src={Foto_3} alt="Image" className="img-fluid" />
+                            <img src={Foto_3} alt="fotoE" className="img-fluid" />
                         </div>
                         <div className="listing-item-content">
-                            <a className="px-3 mb-3 category" href="#">Evento Escolar</a>
-                            <h2 className="mb-1"><a href="#">Dia Del Logro</a></h2>
+                            <a className="px-3 mb-3 category" href="!#">Evento Escolar</a>
+                            <h2 className="mb-1"><a href="!#">Dia Del Logro</a></h2>
                             <span className="address">Lambayaque, Sede Central</span>
                         </div>
                     </div>
@@ -64,11 +64,11 @@ export default function Popular() {
 
                     <div className="listing-item">
                         <div className="listing-image">
-                            <img src={Foto_4} alt="Image" className="img-fluid" />
+                            <img src={Foto_4} alt="fotoB" className="img-fluid" />
                         </div>
                         <div className="listing-item-content">
-                            <a className="px-3 mb-3 category" href="#">Desfile</a>
-                            <h2 className="mb-1"><a href="#">Desfile De Pancartas</a></h2>
+                            <a className="px-3 mb-3 category" href="!#">Desfile</a>
+                            <h2 className="mb-1"><a href="!#">Desfile De Pancartas</a></h2>
                             <span className="address">Lambayaque, Sede Central</span>
                         </div>
                     </div>
@@ -78,11 +78,11 @@ export default function Popular() {
 
                     <div className="listing-item">
                         <div className="listing-image">
-                            <img src={Foto_5} alt="Image" className="img-fluid" />
+                            <img src={Foto_5} alt="fotoC" className="img-fluid" />
                         </div>
                         <div className="listing-item-content">
-                            <a className="px-3 mb-3 category" href="#">Desfile</a>
-                            <h2 className="mb-1"><a href="#">Defile Escolar Nivel Primario</a></h2>
+                            <a className="px-3 mb-3 category" href="!#">Desfile</a>
+                            <h2 className="mb-1"><a href="!#">Defile Escolar Nivel Primario</a></h2>
                             <span className="address">Lambayeque, Plaza</span>
                         </div>
                     </div>

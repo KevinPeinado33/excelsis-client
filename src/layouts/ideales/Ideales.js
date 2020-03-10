@@ -1,5 +1,7 @@
 import React from 'react';
 
+import imagen_vision from './imagen_vision.png';
+
 export default function () {
     return (
         <div className="site-section bg-white">
@@ -15,44 +17,14 @@ export default function () {
                     <div>
                         <div className="testimonial">
                             <figure className="mb-4">
-                                <img src="images/person_3.jpg" alt="Image" className="img-fluid mb-3" />
+                                <img src={imagen_vision} alt="Image" className="img-fluid mb-3" />
                                 <p>Misión</p>
                             </figure>
                             <blockquote>
-                                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit
-                                  aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt
-                  consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+                                <p>Somos una Institución Educativa Privada, basada en un innovador y moderno sistema educativo, conformado por un equipo de profesionales altamente calificados, comprometidos con la formación integral y el desarrollo de nuevas generaciones, mediante el  desarrollo de competencias, capacidades, actitudes y valores; para que su hijo actúe adecuada y eficazmente en los diversos ámbitos de la sociedad. Excelsis adoctrina a sus  estudiantes, no solo para ingresar a la universidad, sino para desenvolverse como líder, con capacidad para asumir los retos y desafíos que el futuro trae consigo. </p>
                             </blockquote>
                         </div>
                     </div>
-                    <div>
-                        <div className="testimonial">
-                            <figure className="mb-4">
-                                <img src="images/person_2.jpg" alt="Image" className="img-fluid mb-3" />
-                                <p>Visión</p>
-                            </figure>
-                            <blockquote>
-                                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit
-                                  aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt
-                  consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
-                            </blockquote>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div className="testimonial">
-                            <figure className="mb-4">
-                                <img src="images/person_4.jpg" alt="Image" className="img-fluid mb-3" />
-                                <p>Lema</p>
-                            </figure>
-                            <blockquote>
-                                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit
-                                  aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt
-                  consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
-                            </blockquote>
-                        </div>
-                    </div>  
-
                 </div>
             </div>
         </div>

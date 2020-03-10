@@ -9,7 +9,11 @@ import NotFound from './components/error404/NotFound';
 import Bandeja from './components/bandeja/Bandeja';
 import Publicaciones from './components/publicacion/Publicacion';
 import NoticiasComponent from './components/noticias/NoticiasComponent';
-import Configuracion from './components/configuracion/Configuracion';
+import CrearNuevoUsuario from './components/configuracion/UsuarioNuevo';
+import CambiarContrasenia from './components/configuracion/CambiarContrasenia';
+import UploadBanner from './layouts/banner/UplaodBanner';
+import ListaUsuarios from './components/configuracion/ListaUsuario';
+import DetalleNoticia from './components/noticias/DetalleNoticia';
 
 import firebase from 'firebase';
 
@@ -35,8 +39,11 @@ function App() {
         <Route exact path='/bandeja' component={Bandeja} />
         <Route exact path='/publicaciones' component={Publicaciones} />
         <Route exact path='/noticias' component={NoticiasComponent} />
-        <Route exact path='/configuracion' component={Configuracion} />
-        
+        <Route exact path='/crear-usuario-nuevo' component={CrearNuevoUsuario} />
+        <Route exact path='/cambio-contrasenia' component={CambiarContrasenia} />
+        <Route exact path='/lista-usuarios' component={ListaUsuarios} />
+        <Route exact path='/cambiar-fondo-princial' component={UploadBanner} />
+        <Route exact path='/detalle-noticia' component={DetalleNoticia} />
         <Route exact component={NotFound} />
       </Switch>
     </Router>

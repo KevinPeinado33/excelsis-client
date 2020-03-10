@@ -9,6 +9,8 @@ export default function NoticiasForm() {
     const [titulo, setTitulo] = useState('');
     const [categoria, setCategoria] = useState('');
     const [lugar, setLugar] = useState('');
+    const [descripcion, setDescripcion] = useState('');
+
     const [noticias, setNoticias] = useState([]);
 
     const [estado, setEstado] = useState(false);
@@ -24,7 +26,7 @@ export default function NoticiasForm() {
     function registrarNotcia(event) {
         event.preventDefault();
         const url = `${API_BASE_URL}/noticia/registrar-noticias`;
-        axios.post(url, { titulo, categoria, lugar, picture })
+        axios.post(url, { titulo, categoria, lugar, picture, descripcion })
             .then(response => {
                 if (response.status === 200) {
                     setTitulo('');
@@ -54,7 +56,7 @@ export default function NoticiasForm() {
         });
     }
 
-    function validarFormulario() { return titulo.length > 0 && categoria.length > 0 && lugar.length > 0; }
+    function validarFormulario() { return titulo.length > 0 && categoria.length > 0 && lugar.length > 0 && descripcion.length > 0; }
 
     function obtenerNoticas() {
         const url = `${API_BASE_URL}/noticia/listado-noticia`;
@@ -73,13 +75,13 @@ export default function NoticiasForm() {
         const url = `${API_BASE_URL}/noticia/cambiar-estado-noticia/${idnoticia}`;
         axios.put(url)
             .then(response => {
-                if(response.status === 200) {
+                if (response.status === 200) {
                     console.log('Actualizado Correctament');
                 } else {
                     console.log('Error');
                 }
             });
-            setConsulta(true);
+        setConsulta(true);
     }
 
     return (
@@ -120,12 +122,12 @@ export default function NoticiasForm() {
                             <div className="col-md-6">
                                 <div className="form-group">
                                     <label>Imagen banner</label>
-                                    <br/>
+                                    <br />
                                     <progress value={uploadValue} max="100"></progress>
-                                    <br/>
-                                    <input 
-                                        type="file" 
-                                        className="form-control-file" 
+                                    <br />
+                                    <input
+                                        type="file"
+                                        className="form-control-file"
                                         onChange={e => handleUpload(e)}
                                     />
                                 </div>
@@ -140,6 +142,21 @@ export default function NoticiasForm() {
                                         onChange={e => setLugar(e.target.value)}
                                     />
                                     <small className="form-text text-muted">Ingrese el lugar donde se hara el evento</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="row">
+                            <div className="col-md-11">
+                                <div className="form-group">
+                                    <label>Descripción De La Noticia</label>
+                                    <textarea 
+                                        className="form-control"
+                                        rows="5"
+                                        value={descripcion}
+                                        onChange={e => setDescripcion(e.target.value)}
+                                    />
+                                    <small className="form-text text-muted">Ingrese la descripcion de la noticia, datos importantes y etc.</small>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +190,7 @@ export default function NoticiasForm() {
                                     <td>{item.titulo}</td>
                                     <td>{item.categoria}</td>
                                     <td>{item.lugar}</td>
-                                    <td>{item.url_imagen.length > 35 ? `${item.url_imagen.substring(0,35)}...`: ''}</td>
+                                    <td>{item.url_imagen.length > 35 ? `${item.url_imagen.substring(0, 35)}...` : ''}</td>
                                     <td>
                                         <button
                                             type="button"

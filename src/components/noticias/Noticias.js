@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import './style-noticias.css'
 
 import { API_BASE_URL } from '../../config/Configuracion';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -31,11 +32,17 @@ export default function Noticias() {
                         {noticias.length === 0 ?''
                             : noticias.map((item) =>
                                 <div className="d-block d-md-flex listing vertical" key={item.idnoticia}>
-                                    <a href="/" className="img d-block" style={{ backgroundImage: `url(${item.url_imagen})` }}></a>
+                                    <Link to={{pathname:`/detalle-noticia`, state:{idnoticia:item.idnoticia}}}>
+                                        <a href="!#" className="img d-block" style={{ backgroundImage: `url(${item.url_imagen})` }}></a>
+                                    </Link>
                                     <div className="lh-content">
                                         <span className="category">{item.categoria}</span>
-                                        <a href="/" className="bookmark"><span className="icon-heart"></span></a>
-                                        <h3><a href="/">{item.titulo}</a></h3>
+                                        <a href="/"className="bookmark"><span className="icon-heart"></span></a>
+                                        <h3>
+                                            <Link to={{pathname:`/detalle-noticia`, state:{idnoticia:item.idnoticia}}}>
+                                                <a href="!#">{item.titulo}</a>
+                                            </Link>
+                                        </h3>
                                         <address>{item.lugar}</address>
                                     </div>
                                 </div>

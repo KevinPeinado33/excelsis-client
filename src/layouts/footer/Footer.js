@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className="row">
                     <div className="col-md-9">
                         <div className="row">
-                            <div className="col-md-6">
+                            <div className="col-md-5">
                                 <h2 className="footer-heading mb-4">Sobre Nosotros</h2>
                                 <p>
                                     Somos una instución educativa, que desea ayudar a la comunidad formando estudiantes
@@ -15,19 +15,20 @@ export default function Footer() {
                                 </p>
                             </div>
 
-                            <div className="col-md-3">
+                            <div className="col-md-4">
                                 <h2 className="footer-heading mb-4">Contactenos</h2>
                                 <ul className="list-unstyled">
                                     <li><a href="/"><i className="ti-mobile menu-icon"></i> 987654321</a></li>
-                                    <li><a href="/"><i className="ti-email menu-icon"></i> ejemplo@gmail.com</a></li>
+                                    <li><a href="/"><i className="ti-email menu-icon"></i> colegioexcelsis@hotmail.com</a></li>
+                                    <li><a href="/"><i className="ti-direction menu-icon"></i> 28 de Julio 846 Lambayeque</a></li>
                                 </ul>
                             </div>
 
                             <div className="col-md-3">
                                 <h2 className="footer-heading mb-4">Siguenos en ...</h2>
-                                <a href="#" className="pl-0 pr-3"><span className="icon-facebook"></span></a>
-                                <a href="#" className="pl-3 pr-3"><span className="icon-twitter"></span></a>
-                                <a href="#" className="pl-3 pr-3"><span className="icon-instagram"></span></a>
+                                <a href="!#" className="pl-0 pr-3"><span className="icon-facebook"></span></a>
+                                <a href="!#" className="pl-3 pr-3"><span className="icon-twitter"></span></a>
+                                <a href="!#" className="pl-3 pr-3"><span className="icon-instagram"></span></a>
                             </div>
                         </div>
                     </div>

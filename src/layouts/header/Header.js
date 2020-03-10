@@ -17,7 +17,6 @@ export default function Header() {
 
                             <ul className="site-menu js-clone-nav mr-auto d-none d-lg-block">
                                 <li className="active"><NavLink to="/">Principal</NavLink></li>
-                                <li><NavLink to="/contacto">Contacto</NavLink></li>
 
                                 <li>
                                     <Link to="/login">
