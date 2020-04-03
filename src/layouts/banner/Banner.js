@@ -15,7 +15,7 @@ export default function Banner() {
 
                         <div className="row justify-content-center mb-4">
                             <div className="col-md-8 text-center">
-                                <h1 className="" data-aos="fade-up">Colegio Excelsis</h1>
+                                <h1><strong>Colegio Excelsis</strong></h1>
                                 <p data-aos="fade-up" data-aos-delay="100">Calidad y Prestigio en Preparación</p>
                             </div>
                         </div>

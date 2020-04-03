@@ -1,5 +1,6 @@
 import React from 'react';
 
+import imagen_mision from './imagen_mision.png';
 import imagen_vision from './imagen_vision.png';
 
 export default function () {
@@ -17,13 +18,38 @@ export default function () {
                     <div>
                         <div className="testimonial">
                             <figure className="mb-4">
-                                <img src={imagen_vision} alt="Image" className="img-fluid mb-3" />
+                                <img src={imagen_mision} alt="Image" className="img-fluid mb-3" />
                                 <p>Misión</p>
                             </figure>
                             <blockquote>
-                                <p>Somos una Institución Educativa Privada, basada en un innovador y moderno sistema educativo, conformado por un equipo de profesionales altamente calificados, comprometidos con la formación integral y el desarrollo de nuevas generaciones, mediante el  desarrollo de competencias, capacidades, actitudes y valores; para que su hijo actúe adecuada y eficazmente en los diversos ámbitos de la sociedad. Excelsis adoctrina a sus  estudiantes, no solo para ingresar a la universidad, sino para desenvolverse como líder, con capacidad para asumir los retos y desafíos que el futuro trae consigo. </p>
+                                <p>
+                                    Somos una Institución Educativa Privada, basada en un moderno sistema
+                                    educativo. Conformado por un equipo de profesionales altamente
+                                    calificados, comprometidos con la formación y el desarrollo de nuevas
+                                    generaciones; mediante el desarrollo de competencias, capacidades,
+                                    actitudes y valores, que utilizará el estudiante al interactuar en los
+                                    diversos ámbitos de la sociedad.
+                                </p>
                             </blockquote>
                         </div>
+
+                    </div>
+                    <div>
+                        <div className="testimonial">
+                            <figure className="mb-4">
+                                <img src={imagen_vision} alt="Image" className="img-fluid mb-3" />
+                                <p>Visión</p>
+                            </figure>
+                            <blockquote>
+                                <p>EXCELSIS formará en el 2025, estudiantes altamente competitivos,
+                                creativos, con cultura investigativa y calidad humana, que lo convierte en
+                                agentes de cambio, capaces de afrontar con éxito, retos que la sociedad
+                                actual le propone y saber actuar adecuada y eficazmente a lo largo de
+                                toda su vida.
+                                </p>
+                            </blockquote>
+                        </div>
+
                     </div>
                 </div>
             </div>

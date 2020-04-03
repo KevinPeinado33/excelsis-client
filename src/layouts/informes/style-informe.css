@@ -7,3 +7,7 @@
     background-color: rgb(200, 69, 62);
     color: #fff;
 }
+
+.fondo_contac {
+    background-image: url(./img_fondo.jpeg);
+}

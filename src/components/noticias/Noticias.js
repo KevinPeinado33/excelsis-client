@@ -23,23 +23,27 @@ export default function Noticias() {
         <Fragment>
             <div className="row">
                 <div className="col-12">
-                    <h3 className="h3 mb-4 text-black">Sección De Noticias</h3>
+                    <div className="row justify-content-center mb-5">
+                        <div className="col-md-7 text-center border-primary">
+                            <h2 className="font-weight-light text-primary">Noticas De La I.E Excelsis</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="row">
                 <div className="col-12  block-13">
                     <div className="owl-carousel nonloop-block-13">
-                        {noticias.length === 0 ?''
+                        {noticias.length === 0 ? ''
                             : noticias.map((item) =>
                                 <div className="d-block d-md-flex listing vertical" key={item.idnoticia}>
-                                    <Link to={{pathname:`/detalle-noticia`, state:{idnoticia:item.idnoticia}}}>
+                                    <Link to={{ pathname: `/detalle-noticia`, state: { idnoticia: item.idnoticia } }}>
                                         <a href="!#" className="img d-block" style={{ backgroundImage: `url(${item.url_imagen})` }}></a>
                                     </Link>
                                     <div className="lh-content">
                                         <span className="category">{item.categoria}</span>
-                                        <a href="/"className="bookmark"><span className="icon-heart"></span></a>
+                                        <a href="/" className="bookmark"><span className="icon-heart"></span></a>
                                         <h3>
-                                            <Link to={{pathname:`/detalle-noticia`, state:{idnoticia:item.idnoticia}}}>
+                                            <Link to={{ pathname: `/detalle-noticia`, state: { idnoticia: item.idnoticia } }}>
                                                 <a href="!#">{item.titulo}</a>
                                             </Link>
                                         </h3>

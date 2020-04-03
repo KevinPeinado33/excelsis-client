@@ -14,6 +14,7 @@ import CambiarContrasenia from './components/configuracion/CambiarContrasenia';
 import UploadBanner from './layouts/banner/UplaodBanner';
 import ListaUsuarios from './components/configuracion/ListaUsuario';
 import DetalleNoticia from './components/noticias/DetalleNoticia';
+import Contacto from './layouts/informes/Contacto';
 
 import firebase from 'firebase';
 
@@ -44,6 +45,7 @@ function App() {
         <Route exact path='/lista-usuarios' component={ListaUsuarios} />
         <Route exact path='/cambiar-fondo-princial' component={UploadBanner} />
         <Route exact path='/detalle-noticia' component={DetalleNoticia} />
+        <Route exact path='/contactanos' component={Contacto} />
         <Route exact component={NotFound} />
       </Switch>
     </Router>

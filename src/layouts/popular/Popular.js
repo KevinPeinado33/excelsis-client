@@ -25,7 +25,7 @@ export default function Popular() {
                         </div>
                         <div className="listing-item-content">
                             <a className="px-3 mb-3 category" href="!#">Nombramiento</a>
-                            <h2 className="mb-1"><a href="!#">Alumnos Reconocidos</a></h2>
+                            <h2 className="mb-1"><a href="https://www.youtube.com/watch?v=Qru0_GPJsCM">Excelsis Nivel Secundario</a></h2>
                             <span className="address">Lambayaque, Sede Central</span>
                         </div>
                     </div>
@@ -38,8 +38,8 @@ export default function Popular() {
                             <img src={Foto_2}  alt="fotoD" className="img-fluid" />
                         </div>
                         <div className="listing-item-content">
-                            <a className="px-3 mb-3 category" href="!#">Desfile</a>
-                            <h2 className="mb-1"><a href="!#">Desfile Escolar Nivel Secundario</a></h2>
+                            <a className="px-3 mb-3 category" href="/">Desfile</a>
+                            <h2 className="mb-1"><a href="https://www.youtube.com/watch?v=zfEB4TzjNeE">Nivel Primario Excelsis</a></h2>
                             <span className="address">Lambayeque, Plaza</span>
                         </div>
                     </div>
@@ -52,8 +52,8 @@ export default function Popular() {
                             <img src={Foto_3} alt="fotoE" className="img-fluid" />
                         </div>
                         <div className="listing-item-content">
-                            <a className="px-3 mb-3 category" href="!#">Evento Escolar</a>
-                            <h2 className="mb-1"><a href="!#">Dia Del Logro</a></h2>
+                            <a className="px-3 mb-3 category" href="/">Evento Escolar</a>
+                            <h2 className="mb-1"><a href="https://www.youtube.com/watch?v=WV1s38y2yUI">Interactuando con los niños</a></h2>
                             <span className="address">Lambayaque, Sede Central</span>
                         </div>
                     </div>
@@ -67,8 +67,8 @@ export default function Popular() {
                             <img src={Foto_4} alt="fotoB" className="img-fluid" />
                         </div>
                         <div className="listing-item-content">
-                            <a className="px-3 mb-3 category" href="!#">Desfile</a>
-                            <h2 className="mb-1"><a href="!#">Desfile De Pancartas</a></h2>
+                            <a className="px-3 mb-3 category" href="/">Desfile</a>
+                            <h2 className="mb-1"><a href="https://www.youtube.com/watch?v=YxBnG_HUaDE">Bienvenida a la I.E Excelsis</a></h2>
                             <span className="address">Lambayaque, Sede Central</span>
                         </div>
                     </div>
@@ -88,7 +88,6 @@ export default function Popular() {
                     </div>
 
                 </div>
-
 
             </div>
         </Fragment>

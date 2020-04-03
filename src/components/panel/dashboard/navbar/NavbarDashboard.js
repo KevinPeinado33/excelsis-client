@@ -21,10 +21,10 @@ export default function NavbarDashboard() {
                             <i className="ti-user mx-0" style={{fontSize: 25, color: '#2164D8'}}></i>
                         </a>
                         <div className="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                            <a className="dropdown-item" href="/">
+                            <Link className="dropdown-item" to="/login">
                                 <i className="ti-power-off text-primary"></i>
                                 Cerrar Sesión
-                            </a>
+                            </Link>
                         </div>  
                     </li>
                 </ul>

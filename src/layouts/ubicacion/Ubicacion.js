@@ -5,7 +5,7 @@ export default function Ubicacion() {
         <Fragment>
             <div className="row justify-content-center mb-5">
                 <div className="col-md-7 text-center border-primary">
-                    <h2 className="font-weight-light text-primary">Nuestra Ubicación</h2>
+                    <h2 className="font-weight-light text-primary">Nos Encontramos Aquí</h2>
                 </div>
             </div>
             <div className="embed-responsive embed-responsive-21by9">

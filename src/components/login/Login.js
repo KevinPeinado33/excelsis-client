@@ -3,6 +3,7 @@ import React, { Fragment, useState } from 'react';
 import { API_BASE_URL } from '../../config/Configuracion';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import LogoExcelsis from '../../resources/img/logo_excelsis.png';
 
 export default function Login(props) {
 
@@ -10,7 +11,7 @@ export default function Login(props) {
     const [password, setPassword] = useState('');
     const [estado, setEstado] = useState(false);
 
-    const { history } = props;
+    //const { history } = props;
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -20,7 +21,8 @@ export default function Login(props) {
                 const data = response.data;
                 if (JSON.stringify(data).length >= 3) {
                     console.log("Correcto");
-                    history.push('/bandeja');
+                    //history.push('/bandeja');
+                    window.location = "/bandeja";
                 } else {
                     console.log("Incorrecto");
                     setEstado(true);
@@ -35,10 +37,8 @@ export default function Login(props) {
     return (
         <Fragment>
             {/** barra superior */}
-            <nav className="navbar navbar-light bg-light">
-                <Link to="/">
-                    <a className="navbar-brand" href="!#">Excelsis</a>
-                </Link>
+            <nav className="navbar navbar-light">
+                <a className="navbar-brand" href="/"><img src={LogoExcelsis} style={{ width: 150 }} /></a>
             </nav>
 
             {/** card login */}
@@ -48,7 +48,7 @@ export default function Login(props) {
                     {estado ? <div className="alert alert-danger" role="alert">Usuario o Contraseña incorrectos</div> : ''}
                     <div className="card">
                         <div className="card-body">
-                            <h4 className="card-title text-center">Inciar Sesión</h4>
+                            <h3 className="text-center mb-3">Inciar Sesión</h3>
                             <form onSubmit={handleSubmit}>
                                 <div className="form-group">
                                     <label>Ingresar Usuario</label>
