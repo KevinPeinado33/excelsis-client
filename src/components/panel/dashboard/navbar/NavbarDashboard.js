@@ -7,9 +7,9 @@ export default function NavbarDashboard() {
     return (
         <nav className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <Link to="/" className="navbar-brand brand-logo mr-5" href="!#"><img src={logo_excelsis} className="mr-2"
-                    alt="logo" /></Link>
-                <Link to="/" className="navbar-brand brand-logo-mini" href="!#"><img src={logo_excelsis} alt="logo" /></Link>
+                <a href="/" className="navbar-brand brand-logo mr-5"><img src={logo_excelsis} className="mr-2"
+                    alt="logo" /></a>
+                <a href="/" className="navbar-brand brand-logo-mini"><img src={logo_excelsis} alt="logo" /></a>
             </div>
             <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
                 <button className="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">

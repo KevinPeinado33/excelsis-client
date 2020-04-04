@@ -44,7 +44,7 @@ export default function () {
                                 <p>EXCELSIS formará en el 2025, estudiantes altamente competitivos,
                                 creativos, con cultura investigativa y calidad humana, que lo convierte en
                                 agentes de cambio, capaces de afrontar con éxito, retos que la sociedad
-                                actual le propone y saber actuar adecuada y eficazmente a lo largo de
+                                actual le propone y sepa actuar adecuada y eficazmente a lo largo de
                                 toda su vida.
                                 </p>
                             </blockquote>

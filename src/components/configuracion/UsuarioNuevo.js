@@ -96,7 +96,7 @@ export default function CrearNuevoUsuario() {
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="form-group">
-                                                <label >Usuario o Correo Electronico</label>
+                                                <label >Usuario o Correo Electrónico</label>
                                                 <input
                                                     type="text"
                                                     className="form-control"

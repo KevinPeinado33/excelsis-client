@@ -17,8 +17,9 @@ export default function Header() {
 
                         <ul className="site-menu js-clone-nav mr-auto d-none d-lg-block">
                             <li className="active"><a href="/"><i className="ti-home menu-icon"></i> Principal</a></li>
-                            <li className="s"><Link to="/contactanos"><i className="ti-headphone-alt menu-icon"></i> Contactanos</Link></li>
+                            <li className="s"><Link to="/contactanos"><i className="ti-headphone-alt menu-icon"></i> Contáctenos</Link></li>
                             <li className="s"><a href="https://www.youtube.com/channel/UCM3ukR-wJYnHd1uTIBh02jw"><i className="ti-youtube menu-icon"></i> Canal De YouTube</a></li>
+                            <li className="s"><a href="https://web.facebook.com/C.Excelsis"><i className="ti-facebook menu-icon"></i> Página De Facebook</a></li>
 
                             <li>
                                 <Link to="/login">

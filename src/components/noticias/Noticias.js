@@ -25,7 +25,7 @@ export default function Noticias() {
                 <div className="col-12">
                     <div className="row justify-content-center mb-5">
                         <div className="col-md-7 text-center border-primary">
-                            <h2 className="font-weight-light text-primary">Noticas De La I.E Excelsis</h2>
+                            <h2 className="font-weight-light text-primary">Noticias Importantes</h2>
                         </div>
                     </div>
                 </div>

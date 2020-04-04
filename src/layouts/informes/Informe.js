@@ -41,7 +41,7 @@ export default function Informe() {
                         <input
                             type="text"
                             className="form-control rounded"
-                            placeholder="Nombre Del Familiar"
+                            placeholder="Nombres Completos"
                             value={nombres}
                             onChange={e => setNombres(e.target.value)}
                         />

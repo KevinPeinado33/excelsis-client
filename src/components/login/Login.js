@@ -11,7 +11,7 @@ export default function Login(props) {
     const [password, setPassword] = useState('');
     const [estado, setEstado] = useState(false);
 
-    //const { history } = props;
+    const { history } = props;
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -20,11 +20,9 @@ export default function Login(props) {
             .then(response => {
                 const data = response.data;
                 if (JSON.stringify(data).length >= 3) {
-                    console.log("Correcto");
-                    //history.push('/bandeja');
-                    window.location = "/bandeja";
+                    history.push('/bandeja');
+                    //window.location = "/bandeja";
                 } else {
-                    console.log("Incorrecto");
                     setEstado(true);
                     setUsuario('');
                     setPassword('');

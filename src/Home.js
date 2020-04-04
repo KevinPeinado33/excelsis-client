@@ -9,6 +9,8 @@ import Popular from './layouts/popular/Popular';
 import Ubicacion from './layouts/ubicacion/Ubicacion';
 import Ideales from './layouts/ideales/Ideales';
 
+import PluginFacebook from './layouts/facebook/PluginFacebook';
+
 export default function Home() {
     return (
         <div className="App">
@@ -49,7 +51,7 @@ export default function Home() {
                         </div>
                     </div>
                     <Ideales />
-
+                    <PluginFacebook />
                 </div>
                 <Footer />
 

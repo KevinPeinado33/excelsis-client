@@ -10,13 +10,13 @@ export default function Footer() {
                             <div className="col-md-5">
                                 <h2 className="footer-heading mb-4">Sobre Nosotros</h2>
                                 <p>
-                                    Somos una instución educativa, que desea ayudar a la comunidad formando estudiantes
+                                    Somos una institución educativa, que desea ayudar a la comunidad formando estudiantes
                                     con valores y capacidades para forjar un mejor futuro.
                                 </p>
                             </div>
 
                             <div className="col-md-5">
-                                <h2 className="footer-heading mb-4">Contactenos</h2>
+                                <h2 className="footer-heading mb-4">Contáctenos</h2>
                                 <ul className="list-unstyled">
                                     <li><a href="/"><i className="ti-mobile menu-icon"></i> 074-310005</a></li>
                                     <li><a href="/"><i className="ti-email menu-icon"></i> excelsisinstitucioneducativa@gmail.com</a></li>
@@ -25,8 +25,8 @@ export default function Footer() {
                             </div>
 
                             <div className="col-md-2">
-                                <h2 className="footer-heading mb-4">Siguenos en ...</h2>
-                                {/**<a href="!#" className="pl-0 pr-3"><span className="icon-facebook"></span></a>*/}
+                                <h2 className="footer-heading mb-4">Síguenos en ...</h2>
+                                <a href="https://www.facebook.com/C.Excelsis?_rdc=1&_rdr" className="pl-0 pr-3"><span className="icon-facebook"></span></a>
                                 <a href="https://www.youtube.com/channel/UCM3ukR-wJYnHd1uTIBh02jw" className="pl-3 pr-3"><span className="icon-youtube"></span></a>
                                 {/**<a href="!#" className="pl-3 pr-3"><span className="icon-instagram"></span></a>*/}
                             </div>

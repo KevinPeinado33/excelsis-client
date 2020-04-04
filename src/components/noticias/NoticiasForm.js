@@ -94,26 +94,26 @@ export default function NoticiasForm() {
                         <div className="row" style={{ marginTop: 30 }}>
                             <div className="col-md-6">
                                 <div className="form-group">
-                                    <label>Titulo de la noticias</label>
+                                    <label>Título de la noticias</label>
                                     <input
                                         type="text"
                                         className="form-control"
                                         value={titulo}
                                         onChange={e => setTitulo(e.target.value)}
                                     />
-                                    <small className="form-text text-muted">Ingrese el titulo de la noticia</small>
+                                    <small className="form-text text-muted">Ingrese el título de la noticia</small>
                                 </div>
                             </div>
                             <div className="col-md-5">
                                 <div className="form-group">
-                                    <label>Categoria</label>
+                                    <label>Categoría</label>
                                     <input
                                         type="text"
                                         className="form-control"
                                         value={categoria}
                                         onChange={e => setCategoria(e.target.value)}
                                     />
-                                    <small className="form-text text-muted">Categoria de la noticia</small>
+                                    <small className="form-text text-muted">Categoría de la noticia</small>
                                 </div>
                             </div>
                         </div>
@@ -172,7 +172,7 @@ export default function NoticiasForm() {
             <div className="row" style={{ marginTop: 50 }}>
                 <div className="col-md-11">
                     <h4>Todas Las Noticias</h4>
-                    <table className="table table-hover" style={{ marginTop: 20, textAlign: "center" }}>
+                    <table className="table table-hover table-responsive" style={{ marginTop: 20, textAlign: "center" }}>
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
