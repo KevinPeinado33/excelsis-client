@@ -1,13 +1,14 @@
 import React from 'react';
+import PluginFacebook from '../facebook/PluginFacebook';
 
 export default function Footer() {
     return (
         <div className="site-footer">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-9">
+                    <div className="col-md-12">
                         <div className="row">
-                            <div className="col-md-5">
+                            <div className="col-md-3">
                                 <h2 className="footer-heading mb-4">Sobre Nosotros</h2>
                                 <p>
                                     Somos una institución educativa, que desea ayudar a la comunidad formando estudiantes
@@ -15,7 +16,7 @@ export default function Footer() {
                                 </p>
                             </div>
 
-                            <div className="col-md-5">
+                            <div className="col-md-3">
                                 <h2 className="footer-heading mb-4">Contáctenos</h2>
                                 <ul className="list-unstyled">
                                     <li><a href="/"><i className="ti-mobile menu-icon"></i> 074-310005</a></li>
@@ -29,6 +30,9 @@ export default function Footer() {
                                 <a href="https://www.facebook.com/C.Excelsis?_rdc=1&_rdr" className="pl-0 pr-3"><span className="icon-facebook"></span></a>
                                 <a href="https://www.youtube.com/channel/UCM3ukR-wJYnHd1uTIBh02jw" className="pl-3 pr-3"><span className="icon-youtube"></span></a>
                                 {/**<a href="!#" className="pl-3 pr-3"><span className="icon-instagram"></span></a>*/}
+                            </div>
+                            <div className="col-md-4">
+                                <PluginFacebook />
                             </div>
                         </div>
                     </div>

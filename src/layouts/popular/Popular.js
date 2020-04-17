@@ -83,7 +83,7 @@ export default function Popular() {
                         <div className="listing-item-content">
                             <a className="px-3 mb-3 category" href="!#">Desfile Escolar</a>
                             <h2 className="mb-1"><a href="!#">Nivel Inicial, Primaria y Secundaria</a></h2>
-                            <span className="address">Lambayeque, Plaza</span>
+                            <span className="address">Lambayeque</span>
                         </div>
                     </div>
 

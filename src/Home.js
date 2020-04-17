@@ -51,7 +51,6 @@ export default function Home() {
                         </div>
                     </div>
                     <Ideales />
-                    <PluginFacebook />
                 </div>
                 <Footer />
 
